@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.enice.wlan.selector"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <application android:icon="@drawable/wlan_icon" android:label="@string/app_name">
+        <activity android:name=".ui.MainTab"
+                  android:label="@string/app_name"
+                  android:launchMode="singleTask"
+                  android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.WLANSelectorSetting"
+                  android:label="@string/app_name"
+                  android:theme="@style/preference_style">
+        </activity>
+        <activity android:name=".ui.About">
+        </activity>
+        <activity android:name=".ui.AppSelector"
+                  android:label="@string/app_name">
+        </activity>
+        <activity android:name=".ui.AuthDialog"
+                  android:label="@string/app_name"
+                  android:theme="@android:style/Theme.Dialog">
+        </activity>
+        <activity android:name=".ui.LogoutDialog"
+                  android:label="@string/app_name"
+                  android:theme="@android:style/Theme.Dialog">
+        </activity>
+       	<receiver android:name=".WakeUpReceiver" />
+        <receiver android:name=".BootBroadcastReceiver">
+    		<intent-filter>
+        		<action android:name="android.intent.action.BOOT_COMPLETED" />
+    		</intent-filter>
+		</receiver>
+        <service android:name=".WLANSelectorService">
+		</service>
+	</application>
+	<uses-sdk android:minSdkVersion="7" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.GET_TASKS"/>
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.READ_LOGS" />
+</manifest>

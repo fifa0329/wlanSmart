@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  
+  <PreferenceCategory android:title="后台服务控制">
+  
+   <CheckBoxPreference android:title="后台服务开关"
+	   android:key="serviceRunning"
+	   android:defaultValue="false"
+	   android:layout="@layout/power_checkbox"/>
+   
+   <ListPreference
+	   android:key="serviceMode"
+	   android:title="工作模式"
+	   android:defaultValue="0"
+	   android:entries="@array/service_mode_entries"
+	   android:entryValues="@array/service_mode_values"
+	   android:layout="@layout/work"/>
+
+   <EditTextPreference android:title="账号"
+    android:key="user"
+    android:layout="@layout/user">
+   </EditTextPreference>
+   <EditTextPreference android:title="密码"
+    android:key="password"
+    android:inputType="textPassword"
+    android:layout="@layout/user">
+   </EditTextPreference>
+
+  </PreferenceCategory>
+</PreferenceScreen>

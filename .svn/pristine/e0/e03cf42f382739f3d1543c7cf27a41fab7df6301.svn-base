@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="preference_style">
+		
+		<item name="android:focusable">false</item>
+		<item name="android:textColor">#ff000000</item>
+		<item name="android:colorBackgroundCacheHint">#ffff0000</item>
+		<item name="android:windowNoTitle">false</item>
+	</style>
+	
+</resources>

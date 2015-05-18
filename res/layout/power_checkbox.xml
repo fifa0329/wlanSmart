@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/back"
+    android:gravity="center"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:paddingRight="?android:attr/scrollbarSize">
+
+    <ImageView
+        android:id="@+id/power"        
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+        android:src="@drawable/power2"
+        android:layout_marginLeft="10dp"/>
+    
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="6dip" 
+        android:layout_marginTop="6dip"
+        android:layout_marginBottom="6dip" 
+        android:layout_weight="1">                                   
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/title"
+            android:text="后台服务开关"
+            android:textSize="32px"
+            android:textColor="#ffe2e2e2"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+         
+    </RelativeLayout>
+
+    <!-- Preference should place its actual preference widget here. -->
+    <LinearLayout android:id="@+android:id/widget_frame"
+        android:layout_width="wrap_content" android:layout_height="match_parent"
+        android:gravity="center_vertical" android:orientation="vertical">
+    </LinearLayout>
+
+</LinearLayout>
